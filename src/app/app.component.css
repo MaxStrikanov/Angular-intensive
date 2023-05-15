@@ -1,0 +1,343 @@
+:root {
+	--black: #000;
+    --bg: #191411;
+    --primary: #D3320F;
+    --gradient: linear-gradient(95.61deg, #DA8023 0%, #E2B438 100%);
+    --gradient-hover: linear-gradient(95.61deg, #a76262 0%, #e26738 100%);
+    --white: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/font/Gilroy-Semibold.ttf');
+}
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../assets/font/Merriweather-Black.ttf');
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Gilroy' sans-serif;
+    color: var(--white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .3s all;
+}
+
+.container {
+    width: min(100% - 1em, 1200px);
+    margin-inline: auto;
+}
+
+.one {
+    background-image: url('../assets/img/bg-1.png');
+    max-width: 100%;
+    height: 1080px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+.menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-item {
+    list-style: none;
+}
+.menu-item a {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 88px;
+    cursor: pointer;
+}
+.menu-item a:hover {
+    color: var(--primary);
+    
+}
+
+.currency {
+    border: 1px solid var(--white);
+    background: transparent;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 20px;
+}
+.currency:hover {
+    border: 1px solid var(--primary);
+    transition: .3s all;
+}
+
+.currency  svg path {
+    fill: var(--white);
+}
+.currency:hover svg path {
+    fill: var(--primary);
+    transition: .3s all;
+}
+.main {
+    display: flex;
+    align-items: center;
+    padding-top: 103px;
+    position: relative;
+    
+}
+.new-nemu {
+    max-width: 600px;
+}
+
+.main-title {
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase
+}
+.main-description {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 56px;
+}
+.btn-secondary {
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 100px;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.main-img {
+    position: absolute;
+    top: -36px;
+    left: calc(100% - 61em);
+}
+
+.btn-primary {
+    background: var(--gradient);
+    border: none;
+    border-radius: 8px;
+    padding: 19px 50px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--bg);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.btn-primary:hover {
+    background: var(--gradient-hover);
+}
+.btn-primary:disabled {
+	cursor: not-allowed;
+	color: rgb(201, 199, 199);
+	background: #757575;
+
+}
+.btn-primary img {
+    transform: translateX(70px);
+    transition: all .5s;
+}
+.btn-primary:hover img {
+    transform: translateX(0px);
+    transition: all .5s;
+}
+
+/******Почему нас выбирают*****/
+.why {
+    background-image: url('../assets/img/bg-2.png');
+    height: 608px;
+    max-width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.title {
+    font-family: 'Merriweather', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.why-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.why-item {
+    max-width: 312px;
+    text-align: center;
+}
+.why-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 24px;
+}
+.why-item-name {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+.why-item-description {
+    font-family: 'Gilroy', sans-serif;;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    margin-top: 24px;
+}
+
+/**************Карточки бургеров*******************/
+.change {
+    background-image: url("../assets/img/burgers_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 180px;
+}
+.burger-cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 60px;
+}
+.burger-card {
+    width: 384px;
+    padding: 30px;
+    background: #211A16;
+    border: 1px solid #353535;
+    border-radius: 16px;
+}
+.burger-card-name {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 24px 0;
+}
+
+.burger-card-description {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+}
+.burger-card-extra {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.burger-other {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.burger-price {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+}
+.burger-weight {
+    font-family: 'Gilroy';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    color: #757575;
+}
+
+/*****************Заказ********************/
+
+.order {
+    background-image: url('../assets/img/order_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 180px;
+    overflow: hidden;
+}
+.order .container {
+    position: relative;
+}
+.order-form {
+    display: flex;
+    flex-direction: column;
+    width: 424px;
+    background: #211A16;
+    border: 1px solid #353535;
+    border-radius: 16px;
+    padding: 60px 40px;
+    margin-left: 674px;
+    margin-top: 60px;
+}
+.order-wrapper {
+    display: flex;
+    align-items: center;
+}
+.order-wrapper img {
+    position: absolute;
+    top: 0px;
+    right: calc(100% - 764px);
+    z-index: -1;
+}
+.order-form-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+input {
+    border-image-source: var(--gradient);
+    border-width: 1px;
+    border-image-slice: 1;
+    background: transparent;
+    padding: 16px 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #757575;
+    border-radius: 8px;
+	outline: none;
+}
+input.error {
+    border-image-source: linear-gradient(90deg, rgba(235,36,50,1) 0%, rgba(242,147,4,0.9724264705882353) 100%);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+}
