@@ -71,13 +71,13 @@
     <h2 class="title">выберите свой бургер</h2>
     <div class="burger-cards">
       <div class="burger-card" *ngFor="let product of productsData">
-          <img src="../assets/img/{{product.image}}" alt="">
-          <div class="burger-card-name">{{product.burgerName}}</div>
-          <div class="burger-card-description">{{product.description}}</div>
+          <img src="{{product.image}}" alt="">
+          <div class="burger-card-name">{{product.title}}</div>
+          <div class="burger-card-description">{{product.text}}</div>
           <div class="burger-card-extra">
               <div class="burger-other">
                   <div class="burger-price">{{product.price}} {{currency}}</div>
-                  <div class="burger-weight">{{product.weight}} гр</div>
+                  <div class="burger-weight">{{product.grams}} гр</div>
               </div>
               <button class="btn-primary" (click)="scrollTo(order, product)">
                   <span>Заказать</span>
